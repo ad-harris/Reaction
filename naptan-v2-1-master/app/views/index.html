@@ -1,0 +1,36 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NaPTAN - map
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="mapid" style="width: 600px; height: 400px; border: solid black 2px"></div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <nav>
+        <h2 class="govuk-heading-m">Menu Options</h2>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="/home">Home</a></li>
+          <li><a class="govuk-link" href="/index">Main Map</a></li>
+          <li><a class="govuk-link" href="/add-users">Invite Users</a></li>
+          <li><a class="govuk-link" href="/metrics">Metrics</a></li>
+        </nav>
+  </div>
+
+
+
+  </div>
+  </main>
+</div>
+
+{% endblock %}

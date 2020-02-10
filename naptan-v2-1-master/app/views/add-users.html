@@ -1,0 +1,57 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NaPTAN - add users
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Invite Users</h1>
+    <p>Please invite fellow authority transport officers, suppliers, contractors and operators who can assist you in improving NaPTAN data in your area or elsewhere in the country. They will receive an email containing a link to complete their registration and will also be subscribed to the NaPTAN product automatically.</p>
+    <p>Once complete click the send button and the email invitations will be sent. A copy of the email will also be sent to your registered address.</p>
+    <div class="govuk-form-group">
+    <label class="govuk-label" for="email">
+    Emails
+    </label>
+    <textarea class="govuk-textarea" id="email" name="email" rows="5" aria-describedby="email-hint"></textarea>
+    </div>
+    <div class="govuk-form-group">
+    <label class="govuk-label" for="note">
+    Note
+    </label>
+    <textarea class="govuk-textarea" id="note" name="note" rows="5" aria-describedby="note-hint"></textarea>
+    </div>
+    <div class="govuk-inset-text">
+    Note: This product is not licensed for use as a general resource for the public or professionals without an involvement with NaPTAN data so please do not invite people who are not directly involved in data issues. If you are interested in having access to a more general product for your area then we would like to hear from you. Please contact peter.miller@itoworld.com who can discuss your requirements in more detail.
+    </div>
+    <a href="/home" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+    Send Invitation
+    </a>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <nav>
+        <h2 class="govuk-heading-m">Menu Options</h2>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="/home">Home</a></li>
+          <li><a class="govuk-link" href="/index">Main Map</a></li>
+          <li><a class="govuk-link" href="/add-users">Invite Users</a></li>
+          <li><a class="govuk-link" href="/metrics">Metrics</a></li>
+        </nav>
+  </div>
+
+
+
+  </div>
+  </main>
+</div>
+
+{% endblock %}

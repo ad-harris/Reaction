@@ -1,0 +1,145 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NaPTAN
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l" id="busStop-BairdsHill">Bus Stop: Charles Dickens School</h1>
+    <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Full Name:</dt>
+    <dd class="govuk-summary-list__value">Broadstairs, adj Charles Dickens School (on Broadstairs Road)<br>[SMS: kntdwpjd]</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Atco Code</dt>
+    <dd class="govuk-summary-list__value">2400A046870A</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Nat Gaz Id</dt>
+    <dd class="govuk-summary-list__value">E0015402</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Location</dt>
+    <dd class="govuk-summary-list__value">638862, 168439</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Latitude</dt>
+    <dd class="govuk-summary-list__value">51.36475502593</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Longitude</dt>
+    <dd class="govuk-summary-list__value">1.43000078939</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Locality</dt>
+    <dd class="govuk-summary-list__value"><a class="govuk-link" href="/locality-Broadstairs">Broadstairs</a></dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Common Name</dt>
+    <dd class="govuk-summary-list__value">Charles Dickens School</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Indicator</dt>
+    <dd class="govuk-summary-list__value">adj</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Direction Name</dt>
+    <dd class="govuk-summary-list__value"></dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Signposted As</dt>
+    <dd class="govuk-summary-list__value"></dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Wheelchair boarding</dt>
+    <dd class="govuk-summary-list__value">Unknown/Inherited</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Stop Area</dt>
+    <dd class="govuk-summary-list__value"></dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Street</dt>
+    <dd class="govuk-summary-list__value">St Peter's Park Road</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Landmark</dt>
+    <dd class="govuk-summary-list__value">School</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Crossing</dt>
+    <dd class="govuk-summary-list__value"></dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Stop Type</dt>
+    <dd class="govuk-summary-list__value">BCT</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Bus Stop Type</dt>
+    <dd class="govuk-summary-list__value">MKD</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Timing Status</dt>
+    <dd class="govuk-summary-list__value">OTH</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">NaPTAN Code</dt>
+    <dd class="govuk-summary-list__value">kntdwpjd</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Locality Centre</dt>
+    <dd class="govuk-summary-list__value">False</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Admin Area</dt>
+    <dd class="govuk-summary-list__value"><a class="govuk-link" href="/admin-Kent"> Kent</a></dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Bearing</dt>
+    <dd class="govuk-summary-list__value">SE</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Road Link Name</dt>
+    <dd class="govuk-summary-list__value">St. Peter's Park Road</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Plus Bus Zones</dt>
+    <dd class="govuk-summary-list__value">Margate</dd>
+    </div>
+    </dl>
+
+<a href="/addWarning" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Add Warning to this Stop
+</a>
+  </div>
+  <div class="govuk-grid-column-one-third">
+<div id="mapid" style="width: 250px; height: 250px; border: solid black 1px"></div>
+<br>
+<nav>
+    <h2 class="govuk-heading-m">Menu Options</h2>
+    <ul class="govuk-list">
+      <li><a class="govuk-link" href="/home">Home</a></li>
+      <li><a class="govuk-link" href="/index">Main Map</a></li>
+      <li><a class="govuk-link" href="/add-users">Invite Users</a></li>
+      <li><a class="govuk-link" href="/metrics">Metrics</a></li>
+    </nav>
+  </div>
+
+
+
+  </div>
+  </main>
+</div>
+
+{% endblock %}

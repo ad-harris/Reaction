@@ -1,0 +1,145 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  XGov
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      <div class="card" style="width: 14rem;">
+    <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" class="gem-c-subscription-links__icon" focusable="false" fill="currentColor" aria-hidden="true"><path d="M1.996 11A2 2 0 0 0 0 12.993c0 1.101.895 1.99 1.996 1.99 1.106 0 2-.889 2-1.99a2 2 0 0 0-2-1.993zM.002 5.097V7.97c1.872 0 3.632.733 4.958 2.059A6.984 6.984 0 0 1 7.015 15h2.888c0-5.461-4.443-9.903-9.9-9.903zM.006 0v2.876c6.676 0 12.11 5.44 12.11 12.124H15C15 6.731 8.273 0 .006 0z"></path></svg>
+        <a href="#">Follow</a>
+      </li>
+    </div>
+
+  </div>
+    </div>
+
+    <span class="govuk-grid-column-three-quarters">
+      <h1 class="govuk-heading-l">
+        Alex Harris
+      </h1>
+      <dl class="govuk-summary-list">
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Organisation
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Department for Transport
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="/CreateProfile.html">
+        <span class="govuk-visually-hidden"> organisation</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Contact information
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">alexander.harris@dft.gov.uk</p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="/CreateProfile.html">
+        <span class="govuk-visually-hidden"> contact information</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Research interests
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">Business, Industry, Manufacturing & Trade</p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="/CreateProfile.html">
+        <span class="govuk-visually-hidden"> contact details</span>
+      </a>
+    </dd>
+  </div>
+
+
+</dl>
+
+</span>
+<span class="govuk-grid-column-three-quarters">
+  <h1 class="govuk-heading-l">
+    Their published articles
+  </h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Organisation</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th><a href="article.html">Campaign for the farmed environment</a></th>
+        <td>Department for Environment, Food and Rural Affairs</td>
+        <td>10/11/19</td>
+      </tr>
+      <tr>
+        <th><a href="article.html">Campaign for the Farmed Environment - survey of land managed voluntarily in 2013/14 (England)</a></th>
+        <td>Department for Environment, Food and Rural Affairs</td>
+        <td>08/09/19</td>
+      </tr>
+      <tr>
+        <th><a href="article.html">Industrialising bovine sterilisation</a></th>
+        <td>Department for Environment, Food and Rural Affairs</td>
+        <td>06/05/19</td>
+      </tr>
+    </tbody>
+
+  </table>
+  <a href="#"><u>See more</u></a>
+</div>
+
+
+
+
+<style>
+.btn-xs {
+  padding: .25rem .4rem;
+  font-size: .650rem;
+  line-height: .5;
+  border-radius: .2rem;
+}
+
+.card {
+  border-color: white;
+}
+
+#search {
+  width: 50em;
+  background-color: #c3cad6;
+
+  border: solid black 0.5px;
+  padding-top:  1em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+
+#empty {
+  color: gray;
+  text-align:center;
+
+}
+
+
+</style>
+
+
+
+{% endblock %}

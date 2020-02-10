@@ -1,0 +1,138 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NaPTAN - home
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+  <div class="govuk-grid-row">
+    <h1 class="govuk-heading-xl">NaPTAN Management System</h1>
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l">Areas</h2>
+    <div class="govuk-form-group">
+    <label class="govuk-label" for="area">
+    Choose an area
+    </label>
+    <select class="govuk-select" id="area" name="area">
+    <option value="uk"><a href="/index">UK</a></option>
+    <option value="kent"><a href="/admin-Kent">Kent</a></option>
+    <option value="broadstairs"><a href="/locality-Broadstairs">Broadstairs</a></option>
+  </select>
+</div>
+    <h2 class="govuk-heading-l">Watch Pages</h2>
+    <p>You have no watch pages in your watch list</p>
+    <h2 class="govuk-heading-l">Recently Visited Features</h2>
+    <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Feature
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Type
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <a class="govuk-link" href="/admin-Kent">Kent</a>
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Locality
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <a class="govuk-link" href="/stopArea-BroadstairsRailStation">Broadstairs Rail Station</a>
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Stop Area
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <a class="govuk-link" href="/locality-Broadstairs">Broadstairs</a>
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Locality
+    </dd>
+  </div>
+</dl>
+    <h2 class="govuk-heading-l">Outstanding Manual Warnings</h2>
+    <p>You have no manual warnings</p>
+    <h2 class="govuk-heading-l">Dataset Info</h2>
+    <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Description</th>
+      <th scope="col" class="govuk-table__header">Date</th>
+      <th scope="col" class="govuk-table__header">File</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">ito26.itoworld.cambridge_15916</th>
+      <td class="govuk-table__cell">Tue Oct 22 08:00:00.0940517724 2019</td>
+      <td class="govuk-table__cell">ito26.itoworld.cambridge_15916</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Naptanxml.zip</th>
+      <td class="govuk-table__cell">Sun Oct 20 04:25:07.0000000000 2019</td>
+      <td class="govuk-table__cell">Naptanxml.zip</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">NPTG V1</th>
+      <td class="govuk-table__cell">Wed May 18 06:20:41.0000000000 2016</td>
+      <td class="govuk-table__cell">ng.zip</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">NPTGxml.zip</th>
+      <td class="govuk-table__cell">Sun Oct 20 04:48:14.0000000000 2019</td>
+      <td class="govuk-table__cell">NPTGxml.zip</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">NCSD</th>
+      <td class="govuk-table__cell">Fri Oct 18 15:42:04.0000000000 2019</td>
+      <td class="govuk-table__cell">StopsInClusterReport.csv</td>
+    </tr>
+  </tbody>
+</table>
+    <h2 class="govuk-heading-l">What's New</h2>
+    <p>More Stop Area tests added. (May 2018)</p>
+    <p>Switched map base to Open Street Map. (May 2018)</p>
+    <h2 class="govuk-heading-l">Getting Started</h2>
+    <p>There are lots of things you can do on the NaPTAN Management system. Try entering a bus stop name, number or town name in the search box, or you can find your area in the areas drop down box.</p>
+    <p>We also have a <a class="govuk-link" href="http://product.itoworld.com/product/naptan/getting_started">Video Tutorial</a> on some of the aspects of the ITO NaPTAN Management system.</p>
+    <p>There is an <a class="govuk-link" href="http://naptan.dft.gov.uk/public-transport/documents/itoguide.pdf">ITO Test Warning Guide</a> that outlines the different warnings that ITO test for and recommendations on how to deal with the problems that the tests uncover.</p>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-form-group">
+  <label class="govuk-label" for="event-name">
+    <h2 class="govuk-heading-m">Search</h2>
+  </label>
+  <span id="event-name-hint" class="govuk-hint">
+    Enter your search term and press enter to execute
+  </span>
+  <input class="govuk-input" id="event-name" name="event-name" type="text">
+</div>
+<p>
+<a class="govuk-link" href="/advanced-search">Advanced Search</a>
+</p>
+<nav>
+  <h2 class="govuk-heading-m">Menu Options</h2>
+  <ul class="govuk-list">
+    <li><a class="govuk-link" href="/add-users">Home</a></li>
+    <li><a class="govuk-link" href="/index">Main Map</a></li>
+    <li><a class="govuk-link" href="/add-users">Invite Users</a></li>
+    <li><a class="govuk-link" href="/metrics">Metrics</a></li>
+</nav>
+  </div>
+
+
+
+  </div>
+  </main>
+</div>
+
+{% endblock %}

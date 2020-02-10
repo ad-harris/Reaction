@@ -1,0 +1,354 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  XGov
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-navigation.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.StepByStepNavigation()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-l">
+      Set up your XGov account
+    </h1>
+
+
+
+    <form class="form" action="profile" method="post">
+
+
+
+    <div id="step-by-step-navigation" class="app-step-nav app-step-nav--large app-step-nav--active" data-show-text="Show" data-hide-text="Hide" data-show-all-text="Show all" data-hide-all-text="Hide all">
+
+      <ol class="app-step-nav__steps">
+
+        <li class="app-step-nav__step js-step" id="check-youre-allowed-to-drive" >
+          <div class="app-step-nav__header js-toggle-panel" data-position="1">
+            <h2 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 1
+                  </span>
+                </span>
+              </span>
+
+
+              <span class="js-step-title">
+                Your account details
+              </span>
+            </h2>
+          </div>
+
+
+
+
+
+          <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-check-youre-allowed-to-drive-1">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                </legend>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="width-20">
+                    Full name
+                  </label>
+                  <input class="govuk-input govuk-input--width-20" id="width-20" name="full-name" type="text">
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="width-20">
+                    Email address
+                  </label>
+                  <input class="govuk-input govuk-input--width-20" id="width-20" name="email" type="email">
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="width-20">
+                    Password (8 characters minimum)
+                  </label>
+                  <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="password">
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="width-20">
+                    Repeat Password
+                  </label>
+                  <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="password">
+                </div>
+          </div>
+        </li>
+
+        <li class="app-step-nav__step js-step" id="get-a-provisional-licence" >
+          <div class="app-step-nav__header js-toggle-panel" data-position="2">
+            <h2 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 2
+                  </span>
+                </span>
+              </span>
+
+              <span class="js-step-title">
+                Your profile
+              </span>
+            </h2>
+          </div>
+          <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-get-a-provisional-licence-2">
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="sort">
+                Organisation
+              </label>
+              <select class="govuk-select" id="sort" name="sort">
+                <option  value="#about">Cabinet Office</option>
+                <option  value="#base">Department for Business, Energy & Industrial Strategy</option>
+                <option  value="#blog">Department for Digital, Culture, Media & Sport</option>
+                <option  value="#contact">Department for Education</option>
+                <option  value="#custom">Department for Environment Food & Rural Affairs</option>
+                <option  value="#support">Department for Exiting the European Union</option>
+                <option  value="#tools">Department for International Development</option>
+                <option  value="#tools">Department for Transport</option>
+                <option  value="#tools">Department for Work & Pensions</option>
+                <option  value="#tools">Department of  Health & Social Care</option>
+                <option  value="#tools">Foreign & Commonwealth Office</option>
+                <option  value="#tools">HM Treasury</option>
+                <option  value="#tools">Home Office</option>
+              </select>
+            </div>
+
+            <p></p>
+
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="sort">
+                Your interests
+              </label>
+              <div class="govuk-form-group">
+                <span id="more-detail-hint" class="govuk-hint">
+                  Please enter the research topics that you are interested in separated by a comma. For example: agriculture, fisheries, environment.
+                </span>
+                <input class="govuk-textarea" id="more-detail" name="interests" rows="5" aria-describedby="more-detail-hint"></input>
+              </div>
+            </div>
+
+
+          </div>
+
+        </li>
+
+
+
+
+
+        <li class="app-step-nav__step js-step" id="driving-lessons-and-practice" >
+          <div class="app-step-nav__header js-toggle-panel" data-position="3">
+            <h2 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 3
+                  </span>
+                </span>
+              </span>
+
+              <span class="js-step-title">
+                Your research articles
+              </span>
+            </h2>
+          </div>
+<div class="app-step-nav__panel js-panel js-hidden" id="step-panel-book-and-manage-your-theory-test-5">
+  <!-- Search form -->
+  <form class="navbar-form" role="search">
+     <div class="input-group add-on">
+       <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+       <div class="input-group-btn">
+         <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+       </div>
+     </div>
+   </form>
+  <p></p>
+  <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      What are my research articles?
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    Your research articles are any published articles that you were involved in creating.
+  </div>
+</details>
+  </div>
+
+
+
+
+
+
+        </li>
+        <li class="app-step-nav__step js-step" id="book-and-manage-your-theory-test" >
+          <div class="app-step-nav__header js-toggle-panel" data-position="5">
+            <h2 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 4
+                  </span>
+                </span>
+              </span>
+
+              <span class="js-step-title">
+                Your preferences
+              </span>
+            </h2>
+          </div>
+
+          <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-book-and-manage-your-theory-test-5">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                      I agree to the <a href="#">Terms & Conditions</a> of using XGov.
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                      I would like to be notified by email if an article is published that matches my interests.
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+<input type = "submit" value = "Save and Continue"  class="govuk-button" onclick="window.location.href = 'dashboard.html'; "data-module="govuk-button">
+
+
+
+<style>
+  .add-on .input-group-btn > .btn {
+    border-left-width:0;left:-2px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  }
+
+  /* stop the glowing blue shadow */
+  .add-on .form-control:focus {
+   box-shadow:none;
+   -webkit-box-shadow:none;
+   border-color:#cccccc;
+  }
+  .form-control{width:20%}
+  .navbar-nav > li > a {
+    border-right: 1px solid #ddd;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  .navbar-nav:last-child{ border-right:0}
+
+.dropbtn {
+  background-color: #1d70b8;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: black solid 1px;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.govuk-textarea {
+      height: 10rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+
+
+{% endblock %}

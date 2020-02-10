@@ -1,0 +1,307 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  XGov
+
+{% endblock %}
+
+{% block content %}
+
+
+
+
+   <div class="container" id="search">
+     <span>
+       <nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1">
+         <span><h1></h1></span>
+         <ul class="navbar-nav ml-auto nav-flex-icons">
+           <li class="nav-item avatar">
+             <a class="nav-link p-0" href="profile.html">
+               <img src="data:image/png;base64,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" class="rounded-circle z-depth-0"
+                 alt="Edit Profile" height="40">
+             </a>
+             <span></span>
+           </li>
+         </ul>
+
+     </nav></span>
+
+     <div class="text-center getstarted">
+         <h3><label for="search-header">Get Started<br>
+                 <small>Search over <a href="GovDatabases.html">8 UK Government Research Databases</a>
+                 </small>
+                 <br/><i class="fa fa-caret-down"></i></label></h3>
+     </div>
+          <form action="/search.html">
+            <div class="input-group mb-4">
+              <input type="search" placeholder="Search for research articles" aria-describedby="button-addon5" class="form-control">
+              <div class="input-group-append">
+                <button id="button-addon5" type="submit" onclick="window.location.href = '/Search.html'; class="btn btn-primary"><i class="material-icons">
+search
+</i></button>
+              </div>
+            </div>
+        </form>
+  </div>
+
+
+
+<div class="container">
+      <table class="Topics">
+          <tr>
+            <td style="text-align:center"><a href="/food/"><i class="material-icons topicon">business_center</i><br><span>Business</span></a></td>
+            <td style="text-align:center"><a href="/food/"><i class="material-icons topicon">star</i><br><span>Brexit</span></a></td>
+            <td style="text-align:center"><a href="/food/"><i class="material-icons topicon">gavel</i><br><span>Crime & Justice</span></a></td>
+            <td style="text-align:center"><a href="/food/"><i class="material-icons topicon">security</i><br><span>Defence</span></a></td>
+            <td style="text-align:center"><a href="/food/"><i class="material-icons topicon">local_library</i><br><span>Education</span></a></td>
+            <td style="text-align:center"><a href="/envirotopic"><i class="material-icons topicon">terrain</i><br><span>Environment</span></a></td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><a href="/food/"><i class="material-icons topicon">payment</i><br><span>Finance</span></a></td>
+            <td style="text-align:center"><a href="/food/"><i class="material-icons topicon">local_pharmacy</i><br><span>Healthcare</span></a></td>
+            <td style="text-align:center"><a href="/food/"><i class="material-icons topicon">toys</i><br><span>Manufacturing</span></a></td>
+            <td style="text-align:center"><a href="/food/"><i class="material-icons topicon">child_friendly</i><br><span>Childcare</span></a></td>
+            <td style="text-align:center"><a href="/food/"><i class="material-icons topicon">nature_people</i><br><span>Social</span></a></td>
+            <td style="text-align:center"><a href="/food/"><i class="material-icons topicon">flight_takeoff</i><br><span>Transport</span></a></td>
+          </tr>
+      </table>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#past-day">
+            Newsfeed
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#past-week">
+            Suggested Articles
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#past-month">
+            Recently Viewed
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#past-year">
+            Saved searches
+          </a>
+        </li>
+      </ul>
+      <section class="govuk-tabs__panel" id="past-day">
+        <h2 class="govuk-heading-l">Newsfeed</h2>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Title</th>
+              <th scope="col" class="govuk-table__header">Organisation</th>
+              <th scope="col" class="govuk-table__header">Date</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="article.html">Campaign for the farmed environment</a></td>
+              <td class="govuk-table__cell">Department for Environment, Food and Rural Affairs</td>
+              <td class="govuk-table__cell">10/11/190</td>
+
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="article.html">Housing Benefit caseload statistics</a></td>
+              <td class="govuk-table__cell">Home Office</td>
+              <td class="govuk-table__cell">08/09/19</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Knife possession sentencing quarterly...</td>
+              <td class="govuk-table__cell">Ministry of Justice</td>
+              <td class="govuk-table__cell">06/05/19</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="article.html">Campaign for the farmed environment</a></td>
+              <td class="govuk-table__cell">Department for Environment, Food and Rural Affairs</td>
+              <td class="govuk-table__cell">10/11/190</td>
+
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="article.html">Housing Benefit caseload statistics</a></td>
+              <td class="govuk-table__cell">Home Office</td>
+              <td class="govuk-table__cell">08/09/19</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Knife possession sentencing quarterly...</td>
+              <td class="govuk-table__cell">Ministry of Justice</td>
+              <td class="govuk-table__cell">06/05/19</td>
+            </tr>
+          </tbody>
+        </table>
+              <a href="#"><u>See more</u></a>
+              <p></p>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    What is my Newsfeed?
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+              </details>
+
+
+      </section>
+      <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+        <h2 class="govuk-heading-l">Suggested Articles</h2>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Title</th>
+              <th scope="col" class="govuk-table__header">Organisation</th>
+              <th scope="col" class="govuk-table__header">Date</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="article.html">Campaign for the farmed environment</a></td>
+              <td class="govuk-table__cell">Department for Environment, Food and Rural Affairs</td>
+              <td class="govuk-table__cell">10/11/190</td>
+
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="article.html">Housing Benefit caseload statistics</a></td>
+              <td class="govuk-table__cell">Home Office</td>
+              <td class="govuk-table__cell">08/09/19</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Knife possession sentencing quarterly...</td>
+              <td class="govuk-table__cell">Ministry of Justice</td>
+              <td class="govuk-table__cell">06/05/19</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="article.html">Campaign for the farmed environment</a></td>
+              <td class="govuk-table__cell">Department for Environment, Food and Rural Affairs</td>
+              <td class="govuk-table__cell">10/11/190</td>
+
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="article.html">Housing Benefit caseload statistics</a></td>
+              <td class="govuk-table__cell">Home Office</td>
+              <td class="govuk-table__cell">08/09/19</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Knife possession sentencing quarterly...</td>
+              <td class="govuk-table__cell">Ministry of Justice</td>
+              <td class="govuk-table__cell">06/05/19</td>
+            </tr>
+          </tbody>
+        </table>
+              <a href="#"><u>See more</u></a>
+              <p></p>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    What are suggested articles?
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+              </details>
+      </section>
+      <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+        <h2 class="govuk-heading-l">Recently Viewed Articles</h2>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+
+
+<h3 id = "empty">You have not viewed any <br> articles yet.</h3>            </tr>
+
+          </tbody>
+        </table>
+
+
+      </section>
+      <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
+        <h2 class="govuk-heading-l">Your saved searches</h2>
+      </section>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<style>
+.btn-xs {
+  padding: .25rem .4rem;
+  font-size: .650rem;
+  line-height: .5;
+  border-radius: .2rem;
+}
+
+.Topics {
+  align-content: center;
+  margin: 2em  auto 2em auto;
+}
+
+.th {
+  vertical-align: middle;
+  text-align: right;
+}
+
+td {
+  padding: 1em;
+}
+
+.topicon  {
+  font-size: 35px; }
+
+
+.card {
+  border-color: white;
+}
+
+#search {
+  width: 50em;
+  background-color: #c3cad6;
+
+  border: solid black 0.5px;
+  padding-top:  1em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+
+#empty {
+  color: gray;
+  text-align:center;
+
+}
+
+
+</style>
+
+
+
+{% endblock %}

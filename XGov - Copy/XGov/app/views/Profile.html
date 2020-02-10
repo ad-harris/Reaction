@@ -1,0 +1,161 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  XGov
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      <div class="card" style="width: 14rem;">
+    <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <button class="govuk-button govuk-button--secondary btn-xs" data-module="govuk-button">
+  Add profile picture
+</button>
+    </div>
+  </div>
+    </div>
+
+    <span class="govuk-grid-column-three-quarters">
+      <h1 class="govuk-heading-l">
+        Your profile
+      </h1>
+      <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['full-name'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="/CreateProfile.html">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Organisation
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Department for Transport
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="/CreateProfile.html">
+        Change<span class="govuk-visually-hidden"> organisation</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Contact information
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">0795 0707415</p>
+      <p class="govuk-body">  {{ data['email'] }}</p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="/CreateProfile.html">
+        Change<span class="govuk-visually-hidden"> contact information</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Research interests
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">{{ data['interests'] }}</p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="/CreateProfile.html">
+        Change<span class="govuk-visually-hidden"> contact details</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Recieve notifications
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">Yes</p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="/CreateProfile.html">
+        Change<span class="govuk-visually-hidden"> contact details</span>
+      </a>
+    </dd>
+  </div>
+
+
+</dl>
+
+</span>
+<span class="govuk-grid-column-three-quarters">
+  <h1 class="govuk-heading-l">
+    Your published articles
+  </h1>
+  <table class="table">
+  
+  <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+
+
+  <h3 id = "empty">You have not viewed any <br> articles yet.</h3>            </tr>
+
+
+
+  </table>
+</div>
+
+
+
+
+<style>
+  #empty {
+    color: gray;
+    text-align:center;
+
+  }
+
+
+.btn-xs {
+  padding: .25rem .4rem;
+  font-size: .650rem;
+  line-height: .5;
+  border-radius: .2rem;
+  margin-bottom: 500px;
+}
+
+.card {
+  border-color: white;
+}
+
+#search {
+  width: 50em;
+  background-color: #c3cad6;
+
+  border: solid black 0.5px;
+  padding-top:  1em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+
+#empty {
+  color: gray;
+  text-align:center;
+
+}
+
+
+</style>
+
+
+
+{% endblock %}

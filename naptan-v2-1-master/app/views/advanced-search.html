@@ -1,0 +1,85 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NaPTAN - advanced search
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-xl">Advanced Search</h1>
+
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+        Define your Search
+      </h2>
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+          England
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+          Scotland
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+          Wales
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+          Northern Ireland
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+  <div class="govuk-form-group">
+  <label class="govuk-label--m" for="event-name">
+    Enter Search Term
+  </label>
+  <input class="govuk-input" id="event-name" name="event-name" type="text">
+  </div>
+
+  <button class="govuk-button" data-module="govuk-button">
+  Search
+  </button>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <nav>
+        <h2 class="govuk-heading-m">Menu Options</h2>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="/home">Home</a></li>
+          <li><a class="govuk-link" href="/index">Main Map</a></li>
+          <li><a class="govuk-link" href="/add-users">Invite Users</a></li>
+          <li><a class="govuk-link" href="/metrics">Metrics</a></li>
+        </nav>
+  </div>
+
+
+
+  </div>
+  </main>
+</div>
+
+{% endblock %}

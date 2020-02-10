@@ -1,0 +1,84 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NaPTAN - Kent
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-xl">Kent Summary</h1>
+  <h2 class="govuk-heading-l">Warnings Summary</h2>
+  <div class="govuk-tabs" data-module="govuk-tabs">
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#high">
+        High Priority
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#medium">
+        Medium Priority
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#low">
+        Low Priority
+      </a>
+    </li>
+  </ul>
+  <section class="govuk-tabs__panel" id="high">
+    <h3 class="govuk-heading-m">High Priority Counts</h3>
+  <canvas id="kentHighChart" width="800" height="450"></canvas>
+
+  </section>
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="medium">
+    <h3 class="govuk-heading-m">Medium Priority Counts</h3>
+    <canvas id="kentMediumChart" width="800" height="450"></canvas>
+
+  </section>
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="low">
+    <h3 class="govuk-heading-m">Low Priority Counts</h3>
+    <canvas id="kentLowChart" width="800" height="450"></canvas>
+
+  </section>
+</div>
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Export All Warnings Counts to CSV
+</button>
+<h2 class="govuk-heading-l">More Exports</h2>
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Export Days Since New Data to CSV
+</button>
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Export Recent History to CSV
+</button>
+<h2 class="govuk-heading-l">Kent Live Warnings</h2>
+<p>There are currently no observations for this area</p>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+<div id="mapid" style="width: 250px; height: 250px; border: solid black 1px"></div>
+<br>
+<nav>
+    <h2 class="govuk-heading-m">Menu Options</h2>
+    <ul class="govuk-list">
+      <li><a class="govuk-link" href="/home">Home</a></li>
+      <li><a class="govuk-link" href="/index">Main Map</a></li>
+      <li><a class="govuk-link" href="/add-users">Invite Users</a></li>
+      <li><a class="govuk-link" href="/metrics">Metrics</a></li>
+    </nav>
+  </div>
+  </div>
+  </main>
+</div>
+
+{% endblock %}

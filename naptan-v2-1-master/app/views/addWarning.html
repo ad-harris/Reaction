@@ -1,0 +1,90 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NaPTAN - add Warning
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <h1 class="govuk-fieldset__heading">
+            What is the nature of the warning?
+          </h1>
+        </legend>
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="warning" name="warning" type="radio" value="Locality not Unique">
+            <label class="govuk-label govuk-radios__label" for="warning">
+              Locality not Unique
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="warning-2" name="warning" type="radio" value="Stop Road Unknown">
+            <label class="govuk-label govuk-radios__label" for="warning-2">
+              Stop Road Unknown
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="warning-3" name="warning" type="radio" value="Stop with Wrong Bearing">
+            <label class="govuk-label govuk-radios__label" for="warning-3">
+              Stop with Wrong Bearing
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="warning-4" name="warning" type="radio" value="Unused Locality Near Stops">
+            <label class="govuk-label govuk-radios__label" for="warning-4">
+              Unused Locality Near Stops
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="warning-5" name="warning" type="radio" value="Other - please describe below">
+            <label class="govuk-label govuk-radios__label" for="warning-5">
+              Other - please describe below
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="more-detail">
+        Please provide more details
+      </label>
+      <span id="more-detail-hint" class="govuk-hint">
+      </span>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </div>
+    <a href="javascript:history.back()" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+      Save and back
+    </a>
+  </div>
+  <div class="govuk-grid-column-one-third">
+<nav>
+    <h2 class="govuk-heading-m">Menu Options</h2>
+    <ul class="govuk-list">
+      <li><a class="govuk-link" href="/home">Home</a></li>
+      <li><a class="govuk-link" href="/index">Main Map</a></li>
+      <li><a class="govuk-link" href="/add-users">Invite Users</a></li>
+      <li><a class="govuk-link" href="/metrics">Metrics</a></li>
+    </nav>
+  </div>
+
+
+
+  </div>
+  </main>
+</div>
+
+{% endblock %}
